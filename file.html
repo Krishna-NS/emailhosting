@@ -25,7 +25,6 @@ const userAction = async () => {
   ItemJSON={"Name" : "Test REST API Account1"};
   const response =  await fetch('https://d5g000007ohjseai-dev-ed.my.salesforce.com/services/data/v20.0/sobjects/Account', {
     method: 'POST',
-     mode: 'no-cors',
     body: ItemJSON, // string or object
     headers: {
       'Content-Type': 'application/json',
