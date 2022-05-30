@@ -21,11 +21,13 @@ function myFunction() {
 
 const userAction = async () => {
   var ItemJSON;
+  const form = document.getElementById('forms');
+  const name = form.elements['fname'];
   
   ItemJSON={"Name" : "Test55"};
   const response = await fetch('https://d5g000007ohjseai-dev-ed.my.salesforce.com/services/data/v20.0/sobjects/Account', {
     method: 'POST',
-    body: JSON.stringify({ "name": "testforme" }), // string or object
+    body: JSON.stringify({ "name": name.value }), // string or object
     headers: {
       'Content-Type': 'application/json',
       'Authorization':'Bearer 00D5g000007ohJs!ARwAQA1mH9nmAH_havXxt_DaA0Nex8medL9a9.4XLLNvI7Gv_rQsn7uDORYtseWEWBt9Bcrtw7qRAwmTx7Usll.4tQa2EIrk'
