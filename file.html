@@ -6,7 +6,7 @@ function myFunction() {
   
 
   var ItemJSON;
-  ItemJSON="{"Name" : "Test REST API Account1"}";
+  ItemJSON={"Name" : "Test REST API Account1"};
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = callbackFunction(xhttp);
     xhttp.open("POST", "https://d5g000007ohjseai-dev-ed.my.salesforce.com/services/data/v20.0/sobjects/Account", false);
@@ -23,7 +23,7 @@ const userAction = async () => {
   var ItemJSON;
   
   ItemJSON={"Name" : "Test55"};
-  const response = fetch('https://d5g000007ohjseai-dev-ed.my.salesforce.com/services/data/v20.0/sobjects/Account', {
+  const response = await fetch('https://d5g000007ohjseai-dev-ed.my.salesforce.com/services/data/v20.0/sobjects/Account', {
     method: 'POST',
     body: JSON.stringify({ "name": "testforme" }), // string or object
     headers: {
